@@ -8,6 +8,7 @@ public class Block {
   public int xPos;
   public int yPos;
   public Color color;
+  public final int SIZE = 20;
 
   public Block(int x, int y, Color c) {
     xPos = x;
@@ -16,8 +17,9 @@ public class Block {
   }
 
   public void draw(Graphics2D g) {
+    //System.out.println("Drawing Block");
     g.setColor(this.color);
-    g.fillRect(xPos, yPos, 20, 20);
+    g.fillRect(xPos * SIZE, yPos * SIZE, SIZE, SIZE);
     //TODO Draw border around blocks
   }
 
