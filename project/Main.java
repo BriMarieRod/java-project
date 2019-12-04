@@ -9,7 +9,8 @@ public class Main {
     JFrame frame = new JFrame();
     Gameplay game = new Gameplay();
 
-    frame.setBounds(70, 70, 700, 600);
+    frame.setSize(700, 600);
+    frame.setLocationRelativeTo(null);
     frame.setTitle("Tetris");
     frame.setResizable(false);
     frame.setVisible(true);
