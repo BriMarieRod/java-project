@@ -21,9 +21,10 @@ public class Block {
 
   public void draw(Graphics2D g) {
     //System.out.println("Drawing Block");
-    g.setColor(this.color);
+    g.setColor(color);
     g.fillRect((xPos * SIZE) + GAME_X, (yPos * SIZE) + GAME_Y, SIZE, SIZE);
-    //TODO Draw border around blocks
+    g.setColor(color.darker());
+    g.drawRect((xPos * SIZE) + GAME_X, (yPos * SIZE) + GAME_Y, SIZE, SIZE);
   }
 
 }
