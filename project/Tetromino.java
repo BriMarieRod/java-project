@@ -11,7 +11,8 @@ abstract class Tetromino {
   abstract void setXPos(int x);
   abstract void setYPos(int y);
 
-  abstract void rotate();
+  abstract void rotateLeft();
+  abstract void rotateRight();
 
   abstract void draw(Graphics2D g);
 

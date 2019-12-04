@@ -32,7 +32,11 @@ public class I extends Tetromino {
     yPos = y;
   }
 
-  public void rotate() {
+  public void rotateLeft() {
+    //TODO
+  }
+
+  public void rotateRight() {
     //TODO
   }
 
