@@ -11,6 +11,9 @@ import java.awt.Graphics2D;
 
 public class Gameplay extends JPanel implements KeyListener, ActionListener {
 
+  public final int GAME_X = 350;
+  public final int GAME_Y = 20;
+
   public Gameplay() {
     addKeyListener(this);
     setFocusable(true);
@@ -19,7 +22,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
 
   public void paint(Graphics g) {
     g.setColor(Color.BLACK);
-    g.fillRect(0, 0, 300, 500);
+    g.fillRect(GAME_X, GAME_Y, 300, 500);
 
     //Block test = new Block(0, 0, Color.GREEN);
     //test.draw((Graphics2D)g);
