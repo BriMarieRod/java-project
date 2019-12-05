@@ -10,11 +10,11 @@ public class I extends Tetromino {
   public Color color = Color.CYAN;
   public Block[] block = new Block[4];
 
-  public I(int x, int y) {
-    xPos = x;
-    yPos = y;
+  public I() {
+    xPos = 5;
+    yPos = 0;
     for(int i = 0; i < 4; i++) {
-      block[i] = new Block(xPos, yPos + i, color);
+      block[i] = new Block(xPos + i, yPos, color);
     }
   }
 

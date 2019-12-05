@@ -13,6 +13,8 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
 
   public static final int X = 350;
   public static final int Y = 20;
+  public static final int WIDTH = 14;
+  public static final int HEIGHT = 25;
 
   public Gameplay() {
     addKeyListener(this);
@@ -22,11 +24,11 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
 
   public void paint(Graphics g) {
     g.setColor(Color.BLACK);
-    g.fillRect(X, Y, 300, 500);
+    g.fillRect(X, Y, WIDTH * Block.SIZE, HEIGHT * Block.SIZE);
 
     //Block test = new Block(0, 0, Color.GREEN);
     //test.draw((Graphics2D)g);
-    I test = new I(0, 0);
+    I test = new I();
     test.draw((Graphics2D)g);
   }
 

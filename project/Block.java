@@ -8,7 +8,7 @@ public class Block {
   public int xPos;
   public int yPos;
   public Color color;
-  public final int SIZE = 20;
+  public static final int SIZE = 20;
 
   public Block(int x, int y, Color c) {
     xPos = x;
