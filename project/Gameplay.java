@@ -11,12 +11,17 @@ import java.awt.Graphics2D;
 
 public class Gameplay extends JPanel implements KeyListener, ActionListener {
 
-  public static final int X = 350;
-  public static final int Y = 20;
-  public static final int WIDTH = 14;
-  public static final int HEIGHT = 25;
+  public static final int X = (Main.PADDING * 2) + Score.WIDTH;
+  public static final int Y = Main.PADDING;
+  public static final int W = 14;
+  public static final int H = 25;
+  public static final int WIDTH = W * Block.SIZE;
+  public static final int HEIGHT = H * Block.SIZE;
 
   I test = new I();
+
+  Score score = new Score();
+  Controls controls = new Controls();
 
   public Gameplay() {
     addKeyListener(this);
@@ -26,11 +31,13 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
 
   public void paint(Graphics g) {
     g.setColor(Color.BLACK);
-    g.fillRect(X, Y, WIDTH * Block.SIZE, HEIGHT * Block.SIZE);
+    g.fillRect(this.X, this.Y, this.WIDTH, this.HEIGHT);
 
     //Block test = new Block(0, 0, Color.GREEN);
     //test.draw((Graphics2D)g);
     test.draw((Graphics2D)g);
+    controls.draw((Graphics2D)g);
+    score.draw((Graphics2D)g);
   }
 
   @Override
