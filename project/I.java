@@ -18,18 +18,16 @@ public class I extends Tetromino {
     }
   }
 
-  public int getXPos() {
-    return xPos;
-  }
-  public int getYPos() {
-    return yPos;
+  public void moveLeft() {
+    if(xPos > 0) {
+      xPos -= 1;
+    }
   }
 
-  public void setXPos(int x) {
-    xPos = x;
-  }
-  public void setYPos(int y) {
-    yPos = y;
+  public void moveRight() {
+    if(true && xPos < 10) { //TODO ONLY IF BLOCK IS HORIZONTAL
+      xPos += 1;
+    }
   }
 
   public void rotateLeft() {
@@ -41,6 +39,11 @@ public class I extends Tetromino {
   }
 
   public void draw(Graphics2D g) {
+    if(true) { //TODO only draw the blocks this way if I is horizontal
+      for(int i = 0; i < 4; i++) {
+        block[i].xPos = this.xPos + i;
+      }
+    }
     for(Block b: block) {
       b.draw(g);
     }

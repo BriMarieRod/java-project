@@ -5,11 +5,8 @@ import java.awt.Color;
 
 abstract class Tetromino {
 
-  abstract int getXPos();
-  abstract int getYPos();
-
-  abstract void setXPos(int x);
-  abstract void setYPos(int y);
+  abstract void moveLeft();
+  abstract void moveRight();
 
   abstract void rotateLeft();
   abstract void rotateRight();

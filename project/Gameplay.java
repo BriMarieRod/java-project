@@ -16,6 +16,8 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
   public static final int WIDTH = 14;
   public static final int HEIGHT = 25;
 
+  I test = new I();
+
   public Gameplay() {
     addKeyListener(this);
     setFocusable(true);
@@ -28,7 +30,6 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
 
     //Block test = new Block(0, 0, Color.GREEN);
     //test.draw((Graphics2D)g);
-    I test = new I();
     test.draw((Graphics2D)g);
   }
 
@@ -44,7 +45,15 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
 
   @Override
   public void keyPressed(KeyEvent e) {
-    //TODO
+    switch(e.getKeyCode()) {
+      case KeyEvent.VK_LEFT:
+        test.moveLeft();
+        break;
+      case KeyEvent.VK_RIGHT:
+        test.moveRight();
+        break;
+    }
+    repaint();
   }
 
   @Override
