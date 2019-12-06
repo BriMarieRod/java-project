@@ -5,6 +5,7 @@ import java.awt.Color;
 
 abstract class Tetromino {
 
+  abstract void moveDown();
   abstract void moveLeft();
   abstract void moveRight();
 

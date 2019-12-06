@@ -21,6 +21,13 @@ public class I extends Tetromino {
   }
 
   @Override
+  public void moveDown() {
+    if((horizontal && yPos < 24) || yPos < 21) {
+      yPos += 1;
+    }
+  }
+
+  @Override
   public void moveLeft() {
     if(xPos > 0) {
       xPos -= 1;
@@ -63,7 +70,11 @@ public class I extends Tetromino {
     } else {
       for(int i = 0; i < 4; i++) {
         block[i].xPos = this.xPos;
-        block[i].yPos = this.yPos + i;
+        if(this.yPos > 20) {
+          block[i].yPos = this.yPos + i - (this.yPos - 21);
+        } else {
+          block[i].yPos = this.yPos + i;
+        }
       }
     }
     for(Block b: block) {
