@@ -52,6 +52,12 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
       case KeyEvent.VK_RIGHT:
         test.moveRight();
         break;
+      case KeyEvent.VK_Z:
+        test.rotateLeft();
+        break;
+      case KeyEvent.VK_C:
+        test.rotateRight();
+        break;
     }
     repaint();
   }
