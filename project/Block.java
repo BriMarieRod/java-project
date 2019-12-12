@@ -16,6 +16,14 @@ public class Block {
     color = c;
   }
 
+  public void setX(int x) {
+    xPos = x;
+  }
+
+  public void setY(int y) {
+    yPos = y;
+  }
+
   public void draw(Graphics2D g) {
     //System.out.println("Drawing Block");
     g.setColor(color);
