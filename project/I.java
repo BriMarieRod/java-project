@@ -5,9 +5,9 @@ import java.awt.Graphics2D;
 
 public class I extends Tetromino {
 
-  private int xPos;
-  private int yPos;
-  private boolean horizontal;
+  public int xPos;
+  public int yPos;
+  public boolean horizontal;
   public Color color = Color.CYAN;
   public Block[] block = new Block[4];
 

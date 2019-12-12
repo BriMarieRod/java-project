@@ -13,10 +13,22 @@ public class Controls {
 
   public void draw(Graphics g) {
     g.setColor(Color.BLUE);
-    //g.fillRect(this.X, this.Y, this.WIDTH, this.HEIGHT);
-    g.fillRect(this.X, this.Y, this.WIDTH, this.HEIGHT); 
+    g.fillRect(this.X - 5, this.Y - 5, this.WIDTH + 10, this.HEIGHT + 10);
     g.setColor(Color.BLACK);
-    g.fillRect(this.X + 5, this.Y+ 5, this.WIDTH - 10, this.HEIGHT - 10);
+    g.fillRect(this.X, this.Y, this.WIDTH, this.HEIGHT);
+    g.setColor(Color.WHITE);
+    int lineHeight = g.getFont().getSize() + 5;
+    String[] controls = {
+      "Controls",
+      "Move Left: Left Arrow",
+      "Move Right: Right Arrow",
+      "Move Down: Down Arrow",
+      "Rotate Left: Z",
+      "Rotate Right: C"
+    };
+    for(int i = 0; i < controls.length; i++) {
+      g.drawString(controls[i], this.X + 5, this.Y + (i+1)*lineHeight);
+    }
   }
 
 }
