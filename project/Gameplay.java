@@ -21,9 +21,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
   public static final int HEIGHT = H * Block.SIZE;
   public static int TIMER = 1;
 
-  
-  
-  
+  private Color[][] well;
 
   //I test = new I();
   I test = new I();
@@ -54,8 +52,38 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
   public void repaint(Graphics g) {
 	  //I test = new I()
   }
- 
   
+  private void init() {
+		well = new Color[12][24];
+		for (int i = 0; i < 12; i++) {
+			for (int j = 0; j < 23; j++) {
+				if (i == 0 || i == 11 || j == 22) {
+					well[i][j] = Color.GRAY;
+				} else {
+					well[i][j] = Color.BLACK;
+				}
+			}
+		}
+		
+	}
+  
+  private boolean collidesAt(int x, int y) {
+		for (int i = 0; i < 99999; i++) {
+			if (well[x + x][y + y] != Color.BLACK) {
+				return true;
+			}
+		}
+		return false;
+	}
+  
+  public void dropDown() {
+		if (!collidesAt(test.xPos, test.yPos + 1)) {
+			test.yPos += 1;
+		} else {
+			
+		}	
+		repaint();
+	}
   
   @Override
   public void actionPerformed(ActionEvent e) {
@@ -95,6 +123,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
     //TODO
   }
   
+/*
   public void well()
   {
 	  int[][] well = new int[14][25];
@@ -106,8 +135,8 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
 		  well[x][y+1] = 1;
 	  
   }
-  
- 
+
+ */
 	
 
   
