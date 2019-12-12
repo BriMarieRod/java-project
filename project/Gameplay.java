@@ -20,9 +20,8 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
   public static final int WIDTH = W * Block.SIZE;
   public static final int HEIGHT = H * Block.SIZE;
   public static int TIMER = 1;
+
   private Color[][] well;
-  
-  
 
   //I test = new I();
   I test = new I();
@@ -85,7 +84,6 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
 		}	
 		repaint();
 	}
-
   
   @Override
   public void actionPerformed(ActionEvent e) {
@@ -125,7 +123,20 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
     //TODO
   }
   
- 
+/*
+  public void well()
+  {
+	  int[][] well = new int[14][25];
+	  int x = test.xPos;
+	  int y = test.yPos;
+	  if(well[x][y] != 1)
+		  well[x][y] = 1;
+	  else
+		  well[x][y+1] = 1;
+	  
+  }
+
+ */
 	
 
   
