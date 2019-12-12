@@ -19,10 +19,13 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
   public static final int H = 25;
   public static final int WIDTH = W * Block.SIZE;
   public static final int HEIGHT = H * Block.SIZE;
-<<<<<<< HEAD
+
   public static int TIMER = 1;
->>>>>>> f5ba1db8bec6ec8e964e1ddc44049d39eb55ebaf
+
 public static int points;
+
+  private Color[][] well;
+
 
   //I test = new I();
   I test = new I();
@@ -55,7 +58,37 @@ public static int points;
 	  //I test = new I()
   }
 
+  private void init() {
+		well = new Color[12][24];
+		for (int i = 0; i < 12; i++) {
+			for (int j = 0; j < 23; j++) {
+				if (i == 0 || i == 11 || j == 22) {
+					well[i][j] = Color.GRAY;
+				} else {
+					well[i][j] = Color.BLACK;
+				}
+			}
+		}
 
+	}
+
+  private boolean collidesAt(int x, int y) {
+		for (int i = 0; i < 99999; i++) {
+			if (well[x + x][y + y] != Color.BLACK) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+  public void dropDown() {
+		if (!collidesAt(test.xPos, test.yPos + 1)) {
+			test.yPos += 1;
+		} else {
+
+		}
+		repaint();
+	}
 
   @Override
   public void actionPerformed(ActionEvent e) {
@@ -95,6 +128,7 @@ public static int points;
     //TODO
   }
 
+/*
   public void well()
   {
 	  int[][] well = new int[14][25];
@@ -106,6 +140,9 @@ public static int points;
 		  well[x][y+1] = 1;
 
   }
+
+ */
+
 
 
 
