@@ -17,6 +17,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
   public static final int H = 25;
   public static final int WIDTH = W * Block.SIZE;
   public static final int HEIGHT = H * Block.SIZE;
+  public static int points;
 
   I test = new I();
 
@@ -27,6 +28,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
     addKeyListener(this);
     setFocusable(true);
     setFocusTraversalKeysEnabled(false);
+    this.points = 0;
   }
 
   public void paint(Graphics g) {
